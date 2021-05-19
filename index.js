@@ -5,6 +5,9 @@ const matchWith = (value, dict) => (condition, lambda) => {
     else if (typeof condition === 'boolean') {
         dict = {...dict, [condition]: matched => lambda(matched)}
     }
+    else if (Array.isArray(condition)) {
+        dict = {...dict, [condition.some(entry => entry === value)]: matched => lambda(matched)}
+    }
     else {
         dict = {...dict, [condition === value]: matched => lambda(matched)}
     }
