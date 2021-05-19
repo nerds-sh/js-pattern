@@ -2,8 +2,11 @@ const matchWith = (value, dict) => (condition, lambda) => {
     if(typeof condition === 'function') {
         dict = {...dict, [condition(value)]: matched => lambda(matched)}
     }
-    else {
+    else if (typeof condition === 'boolean') {
         dict = {...dict, [condition]: matched => lambda(matched)}
+    }
+    else {
+        dict = {...dict, [condition === value]: matched => lambda(matched)}
     }
 
     return match(value, dict)
