@@ -25,6 +25,21 @@ const matchResponse = response => match(response)
     .otherwise(() => console.log('Unknown error'))
 ```
 
+Use the `.has` operator for checking for object fields. It can be endlessly chained and combined with the `.with` and `.like` operators.
+
+```js
+import match from 'js-pattern'
+
+const person = {
+    name: 'Mihai',
+    job: 'Programmer'
+}
+
+const isEmployed = () => match(person)
+    .has('job', () => console.log('Employed'))
+    .otherwise(() => console.log('Unemployed'))
+```
+
 Use the `.otherwise` operator to add a default case. It takes a single parameter,
 `lambda`, which is the function to be run upon match. Using the `.otherwise` operator will run the matching.
 
