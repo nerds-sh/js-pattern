@@ -25,12 +25,22 @@ const like = (value, dict) => (comparison, lambda) => {
     return match(value, dict)
 }
 
+const hasField = (value, field) => Object.keys(value)
+    .includes(field)
+
+const has = (value, dict) => (field, lambda) => {
+    dict = {...dict, [hasField(value, field)]: matched => lambda(matched)}
+
+    return match(value, dict)
+}
+
 const otherwise = (value, dict) => lambda => dict[true] ? dict[true](value) : lambda(value)
 
 const match = (value, dict={}) => ({
     with: matchWith(value, dict),
     like: like(value, dict),
     otherwise: otherwise(value, dict),
+    has: has(value, dict),
     execute: () => dict[true](value)
 })
 
