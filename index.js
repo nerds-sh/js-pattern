@@ -9,7 +9,7 @@ const matchWith = (value, dict) => (condition, lambda) => {
         dict = {...dict, [condition.some(entry => entry === value)]: matched => lambda(matched)}
     }
     else {
-        dict = {...dict, [condition === value]: matched => lambda(matched)}
+        dict = {...dict, [condition === value || !!condition]: matched => lambda(matched)}
     }
 
     return match(value, dict)

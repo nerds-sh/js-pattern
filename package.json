@@ -1,6 +1,6 @@
 {
   "name": "js-pattern",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tiny javascript pattern matching library",
   "main": "index.js",
   "scripts": {
