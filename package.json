@@ -1,6 +1,6 @@
 {
-  "name": "js-pattern",
-  "version": "0.0.4",
+  "name": "@nerdscomputing/js-pattern",
+  "version": "0.0.1",
   "description": "Tiny javascript pattern matching library",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "keywords": [
     "pattern-matching"
   ],
-  "author": "miutamihai",
+  "author": "NerdsComputing",
   "license": "ISC"
 }
