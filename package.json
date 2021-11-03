@@ -1,5 +1,5 @@
 {
-  "name": "@nerdscomputing/js-pattern",
+  "name": "@nerds.sh/js-pattern",
   "version": "0.0.1",
   "description": "Tiny javascript pattern matching library",
   "main": "index.js",
