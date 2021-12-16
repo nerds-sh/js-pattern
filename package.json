@@ -1,6 +1,6 @@
 {
   "name": "@nerds.sh/js-pattern",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tiny javascript pattern matching library",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "keywords": [
     "pattern-matching"
   ],
-  "author": "NerdsComputing",
+  "author": "Nerds.sh",
   "license": "ISC"
 }

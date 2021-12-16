@@ -5,8 +5,8 @@ Tiny javascript library for pattern matching. Inspired by [ts-pattern](https://g
 None.
 
 ## Installation
-* Using npm: `npm i @nerdscomputing/js-pattern`
-* Using yarn: `yarn add @nerdscomputing/js-pattern`
+* Using npm: `npm i @nerds.sh/js-pattern`
+* Using yarn: `yarn add @nerds.sh/js-pattern`
 
 ## Usage
 The library exposes a single function called `match`. 
