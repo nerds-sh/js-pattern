@@ -15,9 +15,11 @@ const matchWith = (value, dict) => (condition, lambda) => {
     return match(value, dict)
 }
 
-const isLike = (value, comparison) => Object.keys(comparison)
-    .filter(key => value[key])
-    .every(key => value[key] === comparison[key])
+const isLike = (value, comparison) => {
+    const existingKeys = Object.keys(comparison).filter(key => value[key])
+
+    return existingKeys.length && existingKeys.every(key => value[key] === comparison[key])
+}
 
 const like = (value, dict) => (comparison, lambda) => {
     dict = {...dict, [isLike(value, comparison)]: matched => lambda(matched)}
